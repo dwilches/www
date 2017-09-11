@@ -1,0 +1,41 @@
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+.profile-picture {
+    border-radius: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: 200px;
+    width: 200px;
+}
+
+.inner {
+    padding: 2rem;
+}
+
+.cover {
+    padding: 1.5rem;
+    width: 600px;
+    border-radius: 10px;
+}
+
+@media (min-width: 40em) {
+    .cover-container {
+        width: 100%; /* Must be percentage or pixels for horizontal alignment */
+    }
+}
+
+@media (min-width: 62em) {
+    .cover-container {
+        width: 42rem;
+    }
+}
