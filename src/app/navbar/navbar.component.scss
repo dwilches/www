@@ -24,8 +24,7 @@
     border-bottom-color: rgb(255,255,255);
 }
 
-.nav-masthead .nav-link:hover,
-.nav-masthead .nav-link:focus {
+.nav-masthead .nav-link:hover:not(.active) {
     border-bottom-color: rgba(255,255,255,.25);
 }
 
