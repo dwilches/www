@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import {NavigationEnd, Router} from "@angular/router";
+
+declare var gtag;
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+
+  constructor(public router: Router) {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        gtag('event', event.urlAfterRedirects);
+      }
+    });
+  }
+
 }

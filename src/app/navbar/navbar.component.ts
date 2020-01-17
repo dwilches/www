@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+declare var gtag;
+
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -10,6 +12,10 @@ export class NavbarComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onLinkedInClicked() {
+    gtag('event', "LinkedIn", {event_category: "Link clicked"});
   }
 
 }
