@@ -9,10 +9,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Build the website to /docs
+      - name: Add build version to the metadata
         run: |
-          pwd
-          ls -l
+          now=$(date)
+          echo Build version: $date
+          sed -i "s/GHA_BUILD_VERSION/$now/" src/index.html
       - name: Build the website to /docs
         run: |
           npm install
