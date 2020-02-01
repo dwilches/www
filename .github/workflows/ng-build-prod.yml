@@ -12,7 +12,7 @@ jobs:
       - name: Add build version to the metadata
         run: |
           now=$(date)
-          echo Build version: $date
+          echo Build version: $now
           sed -i "s/GHA_BUILD_VERSION/$now/" src/index.html
       - name: Build the website to /docs
         run: |
