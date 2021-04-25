@@ -1,45 +1,22 @@
+<div class="main-card">
+    <div class="container-fluid">
+        <h1>About me</h1>
+        <p>
+            I'm a software developer who likes to program, both for work and as a hobby.
+            What I like the most is to search for memory related bugs, develop new features for existing software,
+            program automated tests for my own features, and create scripts to facilitate my tasks.
+        </p>
 
-<div class="container-fluid">
-    <h1>About me</h1>
-    <p>
-        I'm a software developer who likes to program, both for work and as a hobby.
-        What I like the most is to search for memory related bugs, develop new features for existing software,
-        program automated tests for my own features, and create scripts to facilitate my tasks.
-    </p>
-
-    <div class="row">
-        <div class="col">
-            <h4>Languages</h4>
-            <p>
-                <span class="badge badge-pill badge-primary">C++</span>
-                <span class="badge badge-pill badge-primary">Java</span>
-                <span class="badge badge-pill badge-primary">PL/SQL</span>
-                <span class="badge badge-pill badge-primary">C#</span>
-                <span class="badge badge-pill badge-primary">TypeScript</span>
-                <span class="badge badge-pill badge-primary">Erlang</span>
-            </p>
-        </div>
-
-        <div class="col">
-            <h4>Databases</h4>
-            <p>
-                <span class="badge badge-pill badge-info">Oracle</span>
-                <span class="badge badge-pill badge-info">PostgreSQL</span>
-                <span class="badge badge-pill badge-info">MongoDB (NoSQL)</span>
-            </p>
-        </div>
-
-        <div class="col">
-            <h4>Other</h4>
-            <p>
-                <span class="badge badge-pill badge-primary">AWS (EC2, RDS)</span>
-                <span class="badge badge-pill badge-primary">REST WebServices</span>
-                <span class="badge badge-pill badge-primary">HTML</span>
-                <span class="badge badge-pill badge-primary">Node</span>
-                <span class="badge badge-pill badge-primary">Angular</span>
-                <span class="badge badge-pill badge-primary">Mobile Programming (Android)</span>
-                <span class="badge badge-pill badge-primary">Embedded Systems (Arduino)</span>
-            </p>
+        <div class="row">
+            <div *ngFor="let section of sections"
+                 class="col">
+                <h4>{{ section.name }}</h4>
+                <p>
+                <span *ngFor="let item of section.items"
+                      class="badge badge-pill"
+                      [ngClass]="section.class">{{ item }}</span>
+                </p>
+            </div>
         </div>
     </div>
 </div>
