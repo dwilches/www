@@ -1,21 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import {Component} from '@angular/core';
 
 declare var gtag;
 
 @Component({
-  selector: 'app-navbar',
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+    selector: 'app-navbar',
+    templateUrl: './navbar.component.html',
+    styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent {
 
-  constructor() { }
 
-  ngOnInit() {
-  }
-
-  onLinkedInClicked() {
-    gtag('event', "LinkedIn", {event_category: "Link clicked"});
-  }
+    onLinkedInClicked() {
+        gtag('event', "LinkedIn", {event_category: "Link clicked"});
+    }
 
 }

@@ -1,22 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import {Component} from '@angular/core';
 
 declare var gtag;
 
 @Component({
-  selector: 'app-contact',
-  templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss']
+    selector: 'app-contact',
+    templateUrl: './contact.component.html',
+    styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent implements OnInit {
+export class ContactComponent {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-  onEmailClicked() {
-    // Out of curiosity, do people click on the email on my website before copying it thinking it's a link?
-    gtag('event', "me@dwilches.com", {event_category: "Link clicked"});
-  }
+    onEmailClicked() {
+        // Out of curiosity, do people click on the email on my website before copying it thinking it's a link?
+        gtag('event', "me@dwilches.com", {event_category: "Link clicked"});
+    }
 
 }
