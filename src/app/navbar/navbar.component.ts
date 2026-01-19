@@ -1,11 +1,17 @@
 import {Component} from '@angular/core';
+import {RouterLink, RouterLinkActive} from "@angular/router";
 
-declare var gtag;
+declare var gtag: any;
 
 @Component({
-    selector: 'app-navbar',
-    templateUrl: './navbar.component.html',
-    styleUrls: ['./navbar.component.scss']
+  selector: 'app-navbar',
+  templateUrl: './navbar.component.html',
+  standalone: true,
+  imports: [
+    RouterLinkActive,
+    RouterLink
+  ],
+  styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
 

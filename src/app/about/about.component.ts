@@ -1,28 +1,31 @@
 import {Component} from '@angular/core';
+import {NgClass, NgForOf} from "@angular/common";
 
 @Component({
-    selector: 'app-about',
-    templateUrl: './about.component.html',
-    styleUrls: ['./about.component.scss']
+  selector: 'app-about',
+  imports: [NgClass, NgForOf],
+  templateUrl: './about.component.html',
+  standalone: true,
+  styleUrls: ['./about.component.scss']
 })
 export class AboutComponent {
 
-    sections = [
-        {
-            name: "Languages",
-            class: "badge-primary",
-            items: ["C++", "Java", "PL/SQL", "C#", "TypeScript", "Erlang"]
-        },
-        {
-            name: "Databases",
-            class: "badge-info",
-            items: ["Oracle", "PostgreSQL", "MongoDB (NoSQL)"]
-        },
-        {
-            name: "Other",
-            class: "badge-primary",
-            items: ["AWS (EC2, RDS)", "REST WebServices", "HTML", "Node", "Angular", "Android", "Arduino"]
-        }
-    ];
+  sections = [
+    {
+      name: "Languages",
+      class: "badge-primary",
+      items: ["C++", "Python", "Java", "TypeScript", "PL/SQL" ]
+    },
+    {
+      name: "Databases",
+      class: "badge-info",
+      items: ["Oracle", "PostgreSQL", "ElasticSearch", "MongoDB"]
+    },
+    {
+      name: "Other",
+      class: "badge-primary",
+      items: ["AWS (EC2, RDS, ECS, ...)", "Docker", "REST WebServices", "HTML", "Node.js", "Angular", "Arduino"]
+    }
+  ];
 
 }
