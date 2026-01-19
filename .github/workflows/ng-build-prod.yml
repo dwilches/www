@@ -17,7 +17,8 @@ jobs:
       - name: Build the website to /docs
         run: |
           npm install
-          ./node_modules/.bin/ng build --output-path docs
+          ./node_modules/.bin/ng build
+          cp docs/index.html docs/404.html
           echo www.dwilches.com > docs/CNAME
       - name: Add generated site to main repo
         run: |
